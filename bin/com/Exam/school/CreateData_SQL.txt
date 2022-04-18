@@ -1,0 +1,23 @@
+-- (1) Create person data --
+insert into finalschool.person VALUES ('01/01/1980', 'M', 'YES', '100'); -- janitor
+insert into finalschool.person VALUES ('01/01/1970', 'F', 'NO', '200'); -- student
+insert into finalschool.person VALUES ('01/01/1960', 'F', 'NO', '300'); -- teacher
+-- (2) Create teacher data --
+select * from finalschool.teacher;
+insert into finalschool.teacher VALUES('Chemistry', 4, 2222, '300');
+-- (3) Janitor data --
+select * from finalschool.janitor;
+insert into finalschool.janitor VALUES (5, 20.25, '100');
+-- (4) Address data --
+insert into finalschool.address VALUES (100, 'Janitor', 'Way', 'CleanCity', 'FL', '100');
+insert into finalschool.address VALUES (200, 'Student', 'Lane', 'Orlando', 'FL', '200');
+insert into finalschool.address VALUES (300, 'Teacher', 'Ave', 'TeachMeCity', 'FL', '300');
+-- (5) Student data --
+select * from finalschool.student;
+insert into finalschool.student VALUES ('Computer Science', 3.4, 100,'200');
+-- (6) Name data --
+select * from finalschool.name;
+insert into finalschool.name VALUES ('John', 'Janitor', 'J', '100');
+insert into finalschool.name VALUES ('Sally', 'Student', 'S', '200');
+insert into finalschool.name VALUES ('Tara', 'Teacher', 'T', '300');
+

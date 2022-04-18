@@ -1,0 +1,49 @@
+-- (1)
+CREATE TABLE `person` (
+  `DOB` varchar(1000) DEFAULT NULL,
+  `Gender` varchar(45) DEFAULT NULL,
+  `isASmoker` varchar(45) DEFAULT NULL,
+  `personid` varchar(45) NOT NULL,
+  PRIMARY KEY (`personid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+-- (2)
+CREATE TABLE `address` (
+  `streetnum` varchar(1000) DEFAULT NULL,
+  `streetname` varchar(4000) DEFAULT NULL,
+  `streettype` varchar(1000) DEFAULT NULL,
+  `city` varchar(100) DEFAULT NULL,
+  `statecode` varchar(100) DEFAULT NULL,
+  `personid` varchar(45) NOT NULL,
+  PRIMARY KEY (`personid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+-- (3)
+CREATE TABLE finalschool.`name` (
+  `firstname`varchar(100) DEFAULT NULL,
+  `lastname`varchar(100) DEFAULT NULL,
+  `middleinitial`varchar(10) DEFAULT NULL,
+  `personid` varchar(45) NOT NULL,
+  PRIMARY KEY (`personid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+-- (4) 
+CREATE TABLE finalschool.`teacher` (
+  `subjecttaught` varchar(1000) DEFAULT NULL,
+  `numclasses` int DEFAULT NULL,
+  `officenumber`int DEFAULT NULL,
+  `personid` varchar(45) NOT NULL,
+  PRIMARY KEY (`personid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+-- (5)
+CREATE TABLE finalschool.`janitor` (
+  `yearsservice`int DEFAULT NULL,
+	`hourlyrate`  DECIMAL(10,2)  ,
+  `personid` varchar(45) NOT NULL,
+  PRIMARY KEY (`personid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+-- (6)
+CREATE TABLE finalschool.`student` (
+  `major`varchar(100) DEFAULT NULL,
+	`thegpa`  DECIMAL(10,2)  ,
+	`creditscompleted`  DECIMAL(10,2)  ,
+  `personid` varchar(45) NOT NULL,
+  PRIMARY KEY (`personid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
